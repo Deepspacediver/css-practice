@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styleReset.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Interactive rating component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Rating state start -->
+
+    <div class="feedback">
+      <figure class="feedback_img-wrapper">
+        <img class="feedbkac_img" src="images/icon-star.svg" alt="star-icon" />
+      </figure>
+      <h2 class="feedback_heading">How did we do?</h2>
+      <p class="feedback_description">
+        Please let us know how we did with your support request. All feedback is
+        appreciated to help us improve our offering!
+      </p>
+      <form class="feedback_form">
+        <fieldset class="feedback_radio-field">
+          <label class="feedback_label" for="rating-1"
+            ><input
+              type="radio"
+              name="rating"
+              id="rating-1"
+              class="radio-btn"
+            /><span class="feedback_radio-value">1</span></label
+          >
+          <label class="feedback_label" for="rating-2"
+            ><input
+              class="radio-btn"
+              type="radio"
+              name="rating"
+              id="rating-2"
+            /><span class="feedback_radio-value">2</span></label
+          >
+          <label class="feedback_label" for="rating-3">
+            <input
+              class="radio-btn"
+              type="radio"
+              name="rating"
+              id="rating-3"
+            /><span class="feedback_radio-value">3</span></label
+          >
+          <label class="feedback_label" for="rating-4"
+            ><input
+              class="radio-btn"
+              type="radio"
+              name="rating"
+              id="rating-4"
+            /><span class="feedback_radio-value">4</span></label
+          >
+          <label class="feedback_label" for="rating-5"
+            ><input
+              class="radio-btn"
+              type="radio"
+              name="rating"
+              id="rating-5"
+            /><span class="feedback_radio-value">5</span></label
+          >
+        </fieldset>
+        <button class="btn" type="button">Submit</button>
+      </form>
+    </div>
+
+    <!-- Rating state end -->
+
+    <!-- Thank you state start -->
+    <div class="submission-screen">
+      <figure class="submission-screen_img-wrapper">
+        <img
+          src="images/illustration-thank-you.svg"
+          alt="illustration-thank-you"
+          class="submiton-screen_img"
+        />
+      </figure>
+      <p class="submission-screen_choice"></p>
+      <h2 class="submission-screen_heading">Thank you!</h2>
+      <p class="submission-screen_description">
+        Thank you! We appreciate you taking the time to give a rating. If you
+        ever need more support, don’t hesitate to get in touch!
+      </p>
+    </div>
+    <!-- Add rating here -->
+
+    <!-- Thank you state end -->
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+    <script src="/app.js"></script>
+  </body>
+</html>

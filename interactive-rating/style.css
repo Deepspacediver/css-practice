@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+:root {
+  --orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --opaque-grey: hsl(217, 12%, 25%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+
+  --fs-para: 15px;
+
+  --ff-overpass: "Overpass", sans-serif;
+  --fw-400: 400;
+  --fw-700: 700;
+}
+
+body {
+  font-family: var(--ff-overpass);
+}
+
+p {
+  font-size: var(--fs-para);
+}
+
+.feedback,
+.submission-screen {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--dark-blue);
+  color: var(--white);
+
+  padding: 1.5rem;
+  border-radius: 1rem;
+  justify-content: space-evenly;
+  gap: 0.5rem;
+  max-width: 25rem;
+  transition: all ease-in 1ms;
+}
+.feedback_img-wrapper {
+  background-color: var(--opaque-grey);
+  width: fit-content;
+  padding: 0.8rem;
+  border-radius: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.feedback_heading {
+}
+
+.feedback_description {
+  color: var(--light-grey);
+}
+
+.feedback_radio-field {
+  border: 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.feedback_label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.radio-btn {
+  display: none;
+}
+
+.feedback_radio-value {
+  padding: 0.8rem 1.2rem 0.6rem 1.2rem;
+  background-color: var(--opaque-grey);
+  border-radius: 3rem;
+  text-align: center;
+
+  height: fit-content;
+  transition: background-color ease-in 150ms;
+}
+
+.feedback_radio-value:where(:hover) {
+  background-color: var(--orange);
+}
+
+.radio-btn:checked + .feedback_radio-value {
+  background-color: var(--light-grey);
+}
+
+.btn {
+  width: 100%;
+  padding: 0.5rem 0;
+  border-radius: 1rem;
+  border: 0;
+
+  color: var(--white);
+  background-color: var(--orange);
+
+  transition: background-color 150ms ease-in, color 150ms ease-in;
+  cursor: pointer;
+}
+
+.btn:where(:hover, :active) {
+  background-color: var(--white);
+  color: var(--orange);
+}
+
+/* Submission */
+
+.submission-screen {
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  display: none;
+}
+
+.submission-screen_choice {
+  color: var(--orange);
+  background-color: var(--opaque-grey);
+  padding: 0.6rem;
+  border-radius: 1rem;
+  line-height: 1;
+}
+
+.submission-screen_description {
+  color: var(--light-grey);
+  text-align: center;
+  vertical-align: middle;
+}
+
+
+.submission-screen--active{
+  display: flex;
+}
+
+.feedback--inactive{
+  display: none;
+  visibility: hidden;
+}
