@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --darker-cyan: hsl(158, 36%, 20%);
+  --dark-blue: hsl(212, 21%, 14%);
+  --gray-blue: hsl(228, 12%, 48%);
+  --cream: hsl(30, 38%, 92%);
+  --white: hsl(0, 0%, 100%);
+
+  --fw-500: 500;
+  --fw-700: 700;
+
+  --fs-para: 14px;
+
+  --primary-font: "Montserrat", sans-serif;
+  --secondary-font: "Fraunces", serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--cream);
+  font-family: var(--primary-font);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.item {
+  display: flex;
+  flex-direction: column;
+  max-width: 25rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: var(--white);
+  font-family: var(--primary-font);
+}
+
+.item_img {
+  max-width: 100%;
+  display: block;
+}
+
+.item_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 1.5rem;
+  gap: 1rem;
+}
+
+.item_category {
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  color: var(--gray-blue);
+  font-size: var(--fs-para);
+}
+
+.item_heading {
+  font-family: var(--secondary-font);
+  color: var(--dark-blue);
+  line-height: 1;
+  font-size: 2.2rem;
+  font-weight: var(--fw-700);
+}
+
+.item_description {
+  color: var(--gray-blue);
+  line-height: 1.75;
+}
+
+.item_pricing {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.item_price-discounted {
+  color: var(--dark-cyan);
+  font-weight: var(--fw-700);
+  font-family: var(--secondary-font);
+  font-size: 2.3rem;
+  padding-right: 0.2rem;
+}
+
+.item_price-full {
+  color: var(--gray-blue);
+  text-decoration: line-through;
+}
+
+.btn {
+  background-color: var(--dark-cyan);
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: var(--fw-700);
+
+  border: 0;
+  padding: 1.1rem 0;
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  cursor: pointer;
+}
+
+.btn:where(:hover, :focus) {
+  background-color: var(--darker-cyan);
+}
+
+@media (min-width: 700px) {
+  .item {
+    flex-direction: row;
+    max-width: 40rem;
+  }
+  .item_img-wrapper {
+    min-width: 50%;
+  }
+}
